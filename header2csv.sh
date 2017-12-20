@@ -3,7 +3,7 @@
 # This is a free shell script under GNU GPL version 2.0 or above
 # Copyright (C) 2017 Thomas Goelles.
 
-header=$1 # header file
+header=${1:-sico_specs.h} # header file, default is sico_specs.h
 fileoutput=${2:-~/Desktop} # the path for the csv file output, default is the desktop 
 
 if [ ! -f $header  ]; then
@@ -16,7 +16,7 @@ hash md5 2>/dev/null || { echo >&2 "datagen requires md5 but it's not installed.
 hash mktemp 2>/dev/null || { echo >&2 "datagen requires mktemp but it's not installed.  Aborting."; exit 1; }
 
 # Variables
-datamd5=`md5 sico_specs.h | awk '{print $4}'`
+datamd5=`md5 $header | awk '{print $4}'`
 mytempdir=`mktemp -d -t datagen.XXXXXX`
 
 # Generating a CSV file from the header file.
