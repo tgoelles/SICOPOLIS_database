@@ -8,7 +8,7 @@ A tool to generate a database of experiment results of the open source ice sheet
 
 2.) Better overview of simulations.
 
-During development I quickly had several hundreds of simulation and it became hard to keep track of all the simulations. Therefore I developed the database to document and store my simulations.
+During development I quickly had several hundreds of simulations and it became hard to keep track of all the simulations. Therefore I developed the database to document and store my simulations.
 
 This repository contains a bash script to convert SICOPOLIS header files into a comma-separated values (CSV) file and a database template.
 
